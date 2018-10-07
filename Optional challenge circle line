@@ -1,0 +1,16 @@
+function setup() {
+  createCanvas(400, 400);
+}
+
+function draw() {
+  background(255);
+  
+  var sx=25;
+  var sy=350;
+
+  for (var a = 0;a<360; a = a + 10) {
+    sx=width/2+200*sin(a);
+    sy=height/2+200*cos(a);
+    line(sx, sy, mouseX, mouseY);
+  }
+}
