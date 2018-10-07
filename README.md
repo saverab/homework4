@@ -4,3 +4,11 @@
 
 the first 10 tells us where the first line begins. the second 10 tells us how far from the right end of the canvas the last line ends. and the last 10 tells us how far apart the lines are. 
 
+
+The loop body is ran 5 times. 
+
+ ellipse(x[i], y[i], 1 + 2*(50 - i));
+  }
+   for (var i = 0; i < 100; i = i + 20) {
+    ellipse(x[i/2], y[i/2], 1 + (100 - i));
+  }
