@@ -1,0 +1,38 @@
+var xPosition = [];
+var xDirection = [];
+var r = [];
+var g = [];
+var b = [];
+
+function setup() {
+  createCanvas(400, 400);
+
+  for (i = 0; i < 4; i++) {
+    xPosition.push(random(width));
+    xDirection.push(random(-5, 5));
+    r.push(random(255));
+    b.push(random(255));
+    g.push(random(255));
+
+  }
+	// print(r)
+}
+
+function draw() {
+  background(220);
+
+  print(xPosition.length);
+  for (var i = 0; i < xPosition.length; i++) {
+    // print(i)
+    fill(r[i], g[i], b[i]);
+    ellipse(xPosition[i], 200, 30);
+    xPosition[i] += xDirection[i];
+
+    if (xPosition[i] > width) {
+      xDirection[i] *= -1;
+    }
+    if (xPosition[i] < 0) {
+      xDirection[i] *= -1;
+    }
+  }
+}
